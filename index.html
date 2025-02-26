@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <p id="ex1"></p>
+      <!-- ! -->
+      <p id="ex2">hej</p>
+      <p id="ex3"></p>
+    </section>
+    <section>
+      <ol id="letterList">
+        <li>AAAA</li>
+        <li>BBBB</li>
+        <li>CCCC</li>
+        <li>DDDD</li>
+        <li>EEEE</li>
+      </ol>
+    </section>
+  </body>
+</html>
+
+<script>
+  document.write("<p>Hello World!</p>"); //skrivs ut där scriptet är lagt
+
+  let ex1 = document.getElementById("ex1");
+  ex1.innerHTML = "ex1";
+
+  let ex2 = document.getElementById("ex2");
+  ex2.innerHTML = ex2.innerHTML + "san";
+
+  let ex3 = document.getElementById("ex3");
+  ex3.textContent = "ex3";
+
+  // <!-- !   ändra saker som har samma tag utan id -->
+  let exArray = document.getElementsByTagName("p");
+  exArray[0].innerText = exArray[0].innerText + " nr1";
+  exArray[1].innerText = exArray[1].innerText + " nr2";
+
+  // <!-- !   lägger till en ny rad i html -->
+  let parent = document.querySelector("ol");
+  let newChild = document.createElement("li");
+  let content = document.createTextNode("FFFF Nytt!"); // För att skapa text till LI
+
+  newChild.appendChild(content); // Lägger till texten ovan.
+  parent.appendChild(newChild);
+</script>
