@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <form action="">
+        <input type="text" id="tal1" name="tal1" /> <br />
+        <input type="text" id="tal2" name="tal2" /> <br />
+        <button id="knapp">Räkna</button>
+      </form>
+    </section>
+  </body>
+</html>
+
+<script>
+  function init() {
+    let knapp = document.getElementById("knapp");
+    knapp.addEventListener("click", räkna);
+  }
+
+  function räkna(e) {
+    let tal1 =parseInt(document.getElementById("tal1").value);
+    let tal2 = parseInt(document.getElementById("tal2").value);
+    let result = tal1 + tal2;
+    document.write(result);
+    console.log("tjena");   
+  }
+
+  window.addEventListener("load", init);
+</script>

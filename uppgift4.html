@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" name="lösen" id="lös1" />
+      <input type="text" name="lösen2" id="lös2" />
+      <button type="submit" id="check">klar</button>
+    </form>
+  </body>
+</html>
+
+<script>
+  function init() {
+    let check = document.getElementById("check");
+    check.addEventListener("click", checklös);
+  }
+
+  function checklös(e) {
+    let lös1 = document.getElementById("lös1");
+    let lös2 = document.getElementById("lös2");
+
+    if (lös1 != lös2) {
+        alert("lösenorden matchar ej");
+        e.preventDefault();
+    }
+    if(lös1.value ="" && lös2.value="") {
+
+    }
+  }
+
+  window.addEventListener("load", init);
+</script>
