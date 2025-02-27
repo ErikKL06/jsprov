@@ -8,7 +8,7 @@
 <body>
   <header></header>
   <main id="main">
-    <section> <p>section</p></section>
+    <section id="section"> <p>section</p></section>
   </main>
   <footer><p>footer</p></footer>
 </body>
@@ -22,20 +22,30 @@
 
     //Skapar rubrik prepend gör så att det bli överst
     let h2 = document.createElement("h2");
-    h2.innerText = "erik";
+    h2.innerText = "h2";
     main.prepend(h2);
 
     //skapa sections
-
     let section1 = document.createElement("section");
     section1.innerText = "section 1";
-
-
     let section2 = document.createElement("section");
     section2.innerText = "section 2";
-
+    //appendar
     main.appendChild(section1);
     main.appendChild(section2);
+
+
+    let sectionO = document.getElementById("section")
+    let h3 = document.createElement("h3");
+    h3.innerText = "h3";
+    let p1 = document.createElement("p");
+    p1.innerText="p1";
+    let p2 = document.createElement("p");
+    p2.innerText="p2";
+
+    sectionO.prepend(h3)
+    sectionO.appendChild(p1);
+    sectionO.appendChild(p2);
     
   }
 </script>
