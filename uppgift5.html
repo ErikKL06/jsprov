@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>hejsan</p>
+    <p>pejsan</p>
+    <p>bara</p>
+    <p>bella</p>
+    <p>pejsan</p>
+  </body>
+</html>
+
+<script>
+  let mouseElement = document.querySelector("p");
+  mouseElement.addEventListener("mouseenter", over);
+  mouseElement.addEventListener("mouseleave", leave);
+  function over(e) {
+    e.target.style.background = "green";
+  }
+  function leave(e) {
+    e.target.style.background = "none";
+  }
+</script>

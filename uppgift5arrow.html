@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>hejsan</p>
+    <script>
+      document.querySelector("p").addEventListener("mouseover", (e) => {
+        e.target.style.background = "green";
+      });
+      document.querySelector("p").addEventListener("mouseleave", (e) => {
+        e.target.style.background = "none";
+      });
+    </script>
+    <p>pejsan</p>
+    <p>bara</p>
+    <p>bella</p>
+    <p>pejsan</p>
+  </body>
+</html>
